@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Расшифровка кодов ошибок автомобилей OBD2 — описание, причины и способы устранения</title>
+
+<meta name="description" content="Большая база кодов ошибок автомобилей OBD-II с расшифровкой, возможными причинами появления, рекомендациями по диагностике и ориентировочной оценкой сложности ремонта.">
+
+<meta name="keywords" content="коды ошибок автомобиля, obd2, obd ii, ошибки двигателя, p0420, p0300, p0171, расшифровка ошибок автомобиля, диагностика автомобиля">
+
+<meta name="author" content="Avto-Oshibka">
+
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+
+<meta name="googlebot" content="index,follow">
+
+<meta name="theme-color" content="#ffffff">
+
+<meta name="color-scheme" content="light">
+
+<link rel="canonical" href="https://avto-oshibka.github.io/">
+
+<link rel="icon" href="/favicon.ico">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+
+<meta property="og:locale" content="ru_RU">
+
+<meta property="og:site_name" content="Avto-Oshibka">
+
+<meta property="og:title" content="Расшифровка кодов ошибок автомобилей">
+
+<meta property="og:description" content="Справочник кодов ошибок OBD-II с пояснениями, причинами неисправностей и рекомендациями по диагностике автомобиля.">
+
+<meta property="og:url" content="https://avto-oshibka.github.io/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- ===========================
+Schema.org
+=========================== -->
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"Avto-Oshibka",
+  "url":"https://avto-oshibka.github.io/",
+  "inLanguage":"ru",
+  "description":"Информационный справочник по кодам ошибок автомобилей OBD-II.",
+  "potentialAction":{
+    "@type":"SearchAction",
+    "target":"https://avto-oshibka.github.io/search?q={search_term_string}",
+    "query-input":"required name=search_term_string"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"Avto-Oshibka",
+  "url":"https://avto-oshibka.github.io/",
+  "logo":"https://avto-oshibka.github.io/logo.png",
+  "description":"Информационный проект о диагностике автомобилей и расшифровке кодов ошибок OBD-II."
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"WebPage",
+ "url":"https://avto-oshibka.github.io/",
+ "name":"Расшифровка кодов ошибок автомобилей",
+ "description":"Справочник кодов ошибок автомобилей с пояснениями и рекомендациями по диагностике.",
+ "isPartOf":{
+   "@type":"WebSite",
+   "url":"https://avto-oshibka.github.io/"
+ }
+}
+</script>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:"Inter",Arial,sans-serif;
+
+    font-size:17px;
+
+    line-height:1.75;
+
+    color:#222;
+
+    background:#fff;
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+a{
+
+    color:#0d4d92;
+
+    text-decoration:none;
+
+}
+
+a:hover{
+
+    text-decoration:underline;
+
+}
+
+.container{
+
+    max-width:1180px;
+
+    margin:0 auto;
+
+    padding:0 20px;
+
+}
+
+header{
+
+    border-bottom:1px solid #e5e5e5;
+
+}
+
+.header-inner{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    min-height:72px;
+
+}
+
+.logo{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#111;
+
+}
+
+.logo span{
+
+    color:#0d4d92;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:28px;
+
+}
+
+nav a{
+
+    color:#333;
+
+    font-weight:500;
+
+}
+
+main{
+
+    padding:50px 0 70px;
+
+}
+
+section{
+
+    margin-bottom:70px;
+
+}
+
+h1{
+
+    font-size:42px;
+
+    line-height:1.2;
+
+    margin-bottom:24px;
+
+    font-weight:700;
+
+}
+
+h2{
+
+    font-size:31px;
+
+    margin-bottom:22px;
+
+    font-weight:700;
+
+}
+
+h3{
+
+    font-size:23px;
+
+    margin-bottom:14px;
+
+}
+
+p{
+
+    margin-bottom:18px;
+
+}
+
+ul{
+
+    padding-left:22px;
+
+}
+
+li{
+
+    margin-bottom:10px;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:25px;
+
+}
+
+th{
+
+    text-align:left;
+
+    background:#f5f5f5;
+
+    font-weight:600;
+
+}
+
+th,
+td{
+
+    border:1px solid #dddddd;
+
+    padding:12px;
+
+}
+
+.info-box{
+
+    border:1px solid #d8d8d8;
+
+    padding:24px;
+
+    margin-top:28px;
+
+}
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:24px;
+
+}
+
+.card{
+
+    border:1px solid #dcdcdc;
+
+    padding:24px;
+
+}
+
+.note{
+
+    font-size:15px;
+
+    color:#555;
+
+}
+
+footer{
+
+    border-top:1px solid #e5e5e5;
+
+    padding:40px 0;
+
+    font-size:15px;
+
+    color:#666;
+
+}
+
+@media (max-width:900px){
+
+.grid{
+
+grid-template-columns:1fr;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+h1{
+
+font-size:34px;
+
+}
+
+h2{
+
+font-size:28px;
+
+}
+
+}
+
+@media (max-width:640px){
+
+body{
+
+font-size:16px;
+
+}
+
+.container{
+
+padding:0 16px;
+
+}
+
+main{
+
+padding:35px 0;
+
+}
+
+h1{
+
+font-size:30px;
+
+}
+
+h2{
+
+font-size:25px;
+
+}
+
+}
+
+</style>
+
+</head><body>
+
+<header>
+
+    <div class="container header-inner">
+
+        <a href="/" class="logo">
+            Avto<span>Oshibka</span>
+        </a>
+
+        <nav aria-label="Основная навигация">
+
+            <ul>
+
+                <li><a href="/">Главная</a></li>
+
+                <li><a href="/obd2/">Коды OBD-II</a></li>
+
+                <li><a href="/manufacturers/">По маркам</a></li>
+
+                <li><a href="/articles/">Статьи</a></li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<main>
+
+<section>
+
+<div class="container">
+
+<h1>Расшифровка кодов ошибок автомобилей</h1>
+
+<p>
+После появления индикатора <strong>Check Engine</strong> большинство водителей
+сначала узнают код ошибки, а уже потом пытаются понять, насколько серьезна
+неисправность. Одни коды связаны с временным сбоем, другие говорят о проблемах
+с двигателем, системой выпуска, коробкой передач или электроникой автомобиля.
+По одному номеру невозможно поставить точный диагноз, однако он помогает
+сузить круг возможных причин и определить дальнейшие действия.
+</p>
+
+<p>
+На сайте собраны распространенные коды ошибок стандарта OBD-II с их
+расшифровкой, кратким описанием и пояснениями. Для каждой неисправности
+приводятся возможные причины появления, признаки, которые может заметить
+водитель, а также рекомендации по дальнейшей диагностике. Материалы рассчитаны
+на владельцев автомобилей разных марок и не привязаны к одному производителю.
+</p>
+
+<div class="info-box">
+
+<h2>Что можно найти на сайте</h2>
+
+<ul>
+
+<li>расшифровку кодов ошибок OBD-II;</li>
+
+<li>описание возможных причин появления неисправности;</li>
+
+<li>типичные симптомы при эксплуатации автомобиля;</li>
+
+<li>рекомендации по последовательности проверки;</li>
+
+<li>ориентировочную оценку сложности ремонта;</li>
+
+<li>примерную оценку риска дальнейшей эксплуатации автомобиля.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section><section>
+
+<div class="container">
+
+<h2>Что означает код ошибки OBD-II</h2>
+
+<p>
+Код ошибки — это запись, которую электронный блок управления сохраняет после того,
+как обнаружит отклонение в работе одной из систем автомобиля. Если неисправность
+повторяется или выходит за допустимые пределы, на панели приборов обычно загорается
+индикатор Check Engine. Сам код не является причиной поломки. Он лишь показывает,
+в какой системе была зарегистрирована проблема.
+</p>
+
+<p>
+Например, одинаковый код может встречаться на автомобилях разных производителей,
+поскольку большинство современных легковых автомобилей поддерживает стандарт OBD-II.
+При этом конкретная причина неисправности может отличаться. В одном случае потребуется
+замена датчика, в другом — поиск поврежденной проводки, подсоса воздуха или
+неисправного разъема.
+</p>
+
+<p>
+Поэтому расшифровку кода стоит рассматривать как отправную точку диагностики,
+а не как окончательный диагноз.
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2>Из чего состоит код ошибки</h2>
+
+<p>
+Стандартный код включает одну букву и четыре цифры. Первая буква показывает,
+к какой группе относится неисправность.
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>P — Powertrain</h3>
+
+<p>
+Ошибки двигателя, коробки передач, топливной системы, системы зажигания,
+впуска, выпуска и электронного управления силовым агрегатом.
+Именно эта группа встречается чаще всего.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>B — Body</h3>
+
+<p>
+Ошибки систем кузова. Сюда относятся подушки безопасности,
+климатическая установка, центральный замок, освещение,
+стеклоподъемники и другое оборудование салона.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>C — Chassis</h3>
+
+<p>
+Неисправности шасси, тормозной системы, ABS, ESP,
+рулевого управления, подвески и других компонентов,
+отвечающих за движение автомобиля.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>U — Network</h3>
+
+<p>
+Ошибки обмена данными между электронными блоками управления.
+Обычно связаны с нарушением связи по CAN-шине,
+нестабильным питанием или неисправностью одного из модулей.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2>Почему не стоит менять детали только по коду ошибки</h2>
+
+<p>
+Распространенная ситуация — владелец автомобиля считывает код ошибки,
+находит его описание и сразу покупает деталь, которая чаще всего
+упоминается в интернете. Иногда это действительно помогает,
+но нередко проблема оказывается совсем в другом месте.
+</p>
+
+<p>
+Например, ошибка по датчику кислорода далеко не всегда означает,
+что неисправен именно датчик. Причиной могут стать повреждение проводки,
+подсос воздуха, утечка выхлопных газов или неправильная работа двигателя.
+В результате замена исправной детали не устраняет неисправность,
+а только увеличивает расходы.
+</p>
+
+<p>
+По этой причине сначала проверяют наиболее вероятные причины,
+после чего принимают решение о ремонте или замене компонентов.
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="info-box">
+
+<h2>О материалах сайта</h2>
+
+<p>
+Информация подготовлена как справочный материал для владельцев автомобилей.
+При составлении описаний используются техническая документация,
+открытые спецификации стандарта OBD-II, сервисные бюллетени производителей,
+а также общие принципы автомобильной диагностики.
+</p>
+
+<p>
+Мы не утверждаем, что один и тот же код всегда означает одинаковую
+неисправность. На итоговый результат влияют модель автомобиля,
+тип двигателя, год выпуска, установленное оборудование
+и условия эксплуатации.
+</p>
+
+<p>
+Если после появления ошибки автомобиль потерял мощность,
+работает нестабильно, появились посторонние звуки,
+перегрев двигателя или предупреждения тормозной системы,
+эксплуатацию следует ограничить до выяснения причины.
+</p>
+
+</div>
+
+</div>
+
+</section><section>
+
+<div class="container">
+
+<h2>Как правильно использовать код ошибки автомобиля</h2>
+
+<p>
+Первое, что стоит сделать после появления ошибки — считать сохраненный код
+с помощью диагностического сканера. Простые адаптеры OBD-II позволяют получить
+номер неисправности, однако качество расшифровки и глубина проверки зависят
+от возможностей оборудования.
+</p>
+
+<p>
+После получения кода важно учитывать несколько факторов:
+</p>
+
+<ul>
+
+<li>
+<strong>Марка и модель автомобиля.</strong>
+Один и тот же код на разных автомобилях может быть связан с разными узлами
+и иметь различные алгоритмы проверки.
+</li>
+
+<li>
+<strong>Сопутствующие симптомы.</strong>
+Расход топлива, запуск двигателя, посторонние звуки, потеря мощности
+и поведение автомобиля помогают точнее определить причину.
+</li>
+
+<li>
+<strong>История обслуживания.</strong>
+Недавний ремонт, замена деталей или использование некачественного топлива
+могут напрямую влиять на появление некоторых ошибок.
+</li>
+
+<li>
+<strong>Условия возникновения ошибки.</strong>
+Важно понимать, когда именно появилась неисправность:
+при холодном запуске, на холостом ходу, под нагрузкой или после длительной поездки.
+</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="container">
+
+<h2>Почему диагностика важнее простой расшифровки</h2>
+
+<p>
+Современный автомобиль содержит десятки электронных блоков управления.
+Они постоянно обмениваются информацией и контролируют работу различных систем.
+Поэтому код ошибки часто является только признаком отклонения,
+а не прямым указанием на неисправную деталь.
+</p>
+
+<p>
+Грамотная диагностика обычно включает проверку показаний датчиков,
+осмотр соединений, измерение параметров работы двигателя и анализ условий,
+при которых появилась ошибка. Такой подход позволяет избежать ненужной
+замены исправных компонентов.
+</p>
+
+<p>
+Самостоятельная проверка допустима, если владелец понимает назначение системы
+и имеет необходимые знания. Для сложных неисправностей лучше использовать
+профессиональное диагностическое оборудование.
+</p>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="container">
+
+<h2>Ориентировочная оценка сложности ремонта</h2>
+
+<p>
+Ниже расположен простой калькулятор, который помогает получить примерное
+представление о сложности устранения ошибки. Он учитывает типичные случаи,
+с которыми сталкиваются владельцы автомобилей.
+</p>
+
+<p>
+Результат не является точной стоимостью ремонта или гарантией определенного
+времени работы. Фактические сроки зависят от конструкции автомобиля,
+доступности деталей и результатов проверки.
+</p>
+
+
+<!-- Здесь будет вставлен калькулятор из части 3 -->
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="container">
+
+<h2>Ограничения информации о кодах ошибок</h2>
+
+<p>
+Коды OBD-II создавались как инструмент помощи при диагностике,
+а не как универсальная система автоматического определения неисправности.
+Даже профессиональный сканер показывает только зарегистрированное отклонение.
+</p>
+
+<p>
+Перед ремонтом рекомендуется проверить дополнительную информацию:
+условия появления ошибки, реальные параметры работы автомобиля,
+состояние электрических соединений и механических компонентов.
+</p>
+
+<p>
+Используйте информацию из справочника как первый шаг для понимания проблемы.
+Окончательное решение о ремонте стоит принимать после проверки конкретного автомобиля.
+</p>
+
+</div>
+
+</section><div class="repair-calculator">
+
+    <label for="errorCode">
+        Введите код ошибки OBD-II
+    </label>
+
+    <div class="calc-row">
+
+        <input 
+            type="text" 
+            id="errorCode"
+            placeholder="Например: P0420"
+            maxlength="5">
+
+        <button type="button" onclick="checkErrorCode()">
+            Рассчитать
+        </button>
+
+    </div>
+
+
+    <div id="errorResult" style="display:none;">
+
+        <table>
+
+            <tbody>
+
+                <tr>
+                    <td>Код ошибки</td>
+                    <td id="codeValue"></td>
+                </tr>
+
+                <tr>
+                    <td>Сложность ремонта</td>
+                    <td id="repairDifficulty"></td>
+                </tr>
+
+                <tr>
+                    <td>Можно устранить самостоятельно</td>
+                    <td id="repairSelf"></td>
+                </tr>
+
+                <tr>
+                    <td>Требуется сканер</td>
+                    <td id="repairScanner"></td>
+                </tr>
+
+                <tr>
+                    <td>Требуются специнструменты</td>
+                    <td id="repairTools"></td>
+                </tr>
+
+                <tr>
+                    <td>Ориентировочное время ремонта</td>
+                    <td id="repairTime"></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+
+        <div class="info-box">
+
+            <h3>
+                Расчет риска эксплуатации
+            </h3>
+
+            <div id="riskResult"></div>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+<style>
+
+.repair-calculator{
+
+    border:1px solid #ddd;
+
+    padding:30px;
+
+    margin-top:35px;
+
+}
+
+
+.calc-row{
+
+    display:flex;
+
+    gap:12px;
+
+    margin-top:15px;
+
+    margin-bottom:30px;
+
+}
+
+
+.calc-row input{
+
+    flex:1;
+
+    padding:13px;
+
+    border:1px solid #ccc;
+
+    font-size:16px;
+
+    text-transform:uppercase;
+
+}
+
+
+.calc-row button{
+
+    background:#0d4d92;
+
+    color:white;
+
+    border:none;
+
+    padding:13px 25px;
+
+    cursor:pointer;
+
+}
+
+
+.calc-row button:hover{
+
+    background:#08396d;
+
+}
+
+
+@media(max-width:600px){
+
+.calc-row{
+
+    flex-direction:column;
+
+}
+
+}
+
+
+</style>
+
+
+<script>
+
+
+const errorDatabase = {
+
+
+"P0420":{
+
+difficulty:"★★★☆☆",
+
+self:"Нет",
+
+scanner:"Да",
+
+tools:"Нет",
+
+time:"30–120 минут",
+
+risk:80
+
+},
+
+
+"P0300":{
+
+difficulty:"★★★★☆",
+
+self:"Частично",
+
+scanner:"Да",
+
+tools:"Нет",
+
+time:"1–3 часа",
+
+risk:65
+
+},
+
+
+"P0171":{
+
+difficulty:"★★★☆☆",
+
+self:"Да",
+
+scanner:"Да",
+
+tools:"Нет",
+
+time:"30–150 минут",
+
+risk:75
+
+},
+
+
+"P0401":{
+
+difficulty:"★★★☆☆",
+
+self:"Да",
+
+scanner:"Да",
+
+tools:"Иногда",
+
+time:"1–2 часа",
+
+risk:75
+
+},
+
+
+"P0016":{
+
+difficulty:"★★★★★",
+
+self:"Нет",
+
+scanner:"Да",
+
+tools:"Да",
+
+time:"2–6 часов",
+
+risk:45
+
+},
+
+
+"U0100":{
+
+difficulty:"★★★★☆",
+
+self:"Нет",
+
+scanner:"Да",
+
+tools:"Да",
+
+time:"1–5 часов",
+
+risk:55
+
+}
+
+
+};
+
+
+
+function checkErrorCode(){
+
+
+let code=document
+.getElementById("errorCode")
+.value
+.toUpperCase()
+.trim();
+
+
+
+if(!code){
+
+alert("Введите код ошибки");
+
+return;
+
+}
+
+
+
+let data=errorDatabase[code];
+
+
+
+if(!data){
+
+
+let first=code.charAt(0);
+
+
+data={
+
+difficulty:"★★★☆☆",
+
+self:"Нет",
+
+scanner:"Да",
+
+tools:"Нет",
+
+time:"30–180 минут",
+
+risk:70
+
+};
+
+
+
+if(first==="P"){
+
+data.difficulty="★★★☆☆";
+
+}
+
+
+if(first==="B"){
+
+data.difficulty="★★☆☆☆";
+
+data.self="Да";
+
+data.risk=85;
+
+}
+
+
+if(first==="C"){
+
+data.difficulty="★★★★☆";
+
+data.tools="Да";
+
+data.risk=60;
+
+}
+
+
+if(first==="U"){
+
+data.difficulty="★★★★☆";
+
+data.tools="Да";
+
+data.risk=55;
+
+}
+
+
+}
+
+
+
+document
+.getElementById("codeValue")
+.innerHTML=code;
+
+
+document
+.getElementById("repairDifficulty")
+.innerHTML=data.difficulty;
+
+
+document
+.getElementById("repairSelf")
+.innerHTML=data.self;
+
+
+document
+.getElementById("repairScanner")
+.innerHTML=data.scanner;
+
+
+document
+.getElementById("repairTools")
+.innerHTML=data.tools;
+
+
+document
+.getElementById("repairTime")
+.innerHTML=data.time;
+
+
+
+let riskText="";
+
+
+
+if(data.risk>=80){
+
+
+riskText=`
+
+<p>
+🟢 <strong>Можно продолжать движение — ориентировочно ${data.risk}%</strong>
+</p>
+
+<p>
+🟡 Желательно устранить неисправность в ближайшее время.
+</p>
+
+<p>
+🔴 При длительной эксплуатации возможны дополнительные неисправности
+или увеличение стоимости ремонта.
+</p>
+
+`;
+
+
+}
+
+else if(data.risk>=60){
+
+
+riskText=`
+
+<p>
+🟡 <strong>Эксплуатация возможна с осторожностью — около ${data.risk}%</strong>
+</p>
+
+<p>
+Рекомендуется провести диагностику и устранить причину ошибки
+без длительного откладывания ремонта.
+</p>
+
+<p>
+🔴 Игнорирование неисправности может привести к ухудшению работы системы.
+</p>
+
+`;
+
+}
+
+
+else{
+
+
+riskText=`
+
+<p>
+🔴 <strong>Высокий риск дальнейшей эксплуатации — около ${data.risk}%</strong>
+</p>
+
+<p>
+Рекомендуется ограничить использование автомобиля
+до проведения диагностики.
+</p>
+
+<p>
+Возможны повреждения связанных узлов и увеличение затрат на ремонт.
+</p>
+
+`;
+
+}
+
+
+
+document
+.getElementById("riskResult")
+.innerHTML=riskText;
+
+
+
+document
+.getElementById("errorResult")
+.style.display="block";
+
+
+}
+
+
+
+</script></main>
+
+
+<footer>
+
+<div class="container">
+
+<p>
+<strong>Avto-Oshibka</strong> — информационный справочник по кодам ошибок автомобилей OBD-II.
+</p>
+
+<p>
+Материалы сайта предназначены для ознакомления и помогают лучше понять возможные
+причины появления неисправностей. Расшифровка кода ошибки не заменяет полноценную
+диагностику автомобиля.
+</p>
+
+<p>
+При подготовке информации учитываются особенности современных систем управления
+автомобилем, принцип работы электронных блоков и общие методы поиска неисправностей.
+</p>
+
+<p>
+© <span id="year"></span> Avto-Oshibka. Все материалы размещены в информационных целях.
+</p>
+
+</div>
+
+</footer>
+
+
+<script>
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+</script>
+
+
+</body>
+
+</html>
