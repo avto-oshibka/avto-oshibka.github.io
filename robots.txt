@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://avto-oshibka.github.io/sitemap.xml
