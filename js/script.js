@@ -69,3 +69,26 @@ clickmap:true,
 trackLinks:true,
 accurateTrackBounce:true
 });
+(function () {
+  var path = window.location.pathname;
+  var isHome =
+    path === '/' ||
+    path === '/index.html' ||
+    path === '/index.htm' ||
+    path === '' ||
+    /\/index\.(html?|php)$/i.test(path);
+
+  if (isHome) return; // на главной не выводим
+
+  // Подключаем скрипты
+  var ctx = document.createElement('script');
+  ctx.src = 'https://yandex.ru/ads/system/context.js';
+  ctx.async = true;
+  document.body.appendChild(ctx);
+
+  var loader = document.createElement('script');
+  loader.src = 'https://yandex.ru/ads/system/ap-loader.js';
+  loader.async = true;
+  loader.setAttribute('data-page-id', '20408918');
+  document.body.appendChild(loader);
+})();
